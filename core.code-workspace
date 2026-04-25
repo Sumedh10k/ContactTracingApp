@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/MySfProjects/contact-tracing"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/MySfProjects/contact-tracing"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\MySfProjects\\contact-tracing\\.eslintrc.json"
+    }
+  }
+}

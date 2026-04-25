@@ -1,0 +1,13 @@
+public with sharing class CTLocationTracingDataCleanupBatch implements Database.Batchable<sObject>{
+   public Database.QueryLocator start (Database.BatchableContext BC){
+        return Database.getQueryLocator('SELECT Id FROM Location_Tracing__c WHERE Visit_Date__c < LAST_N_DAYS:30');
+    }
+
+    public void execute(Database.batchableContext BC, List<Location_Tracing__c> scope){
+        delete scope;
+    }
+
+    public void finish (Database.BatchableContext BC){
+        //batch is completed
+    }
+}
